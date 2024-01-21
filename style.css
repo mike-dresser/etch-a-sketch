@@ -2,25 +2,45 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+#main {
+    width: 400px;
+    margin: auto;
+    text-align: center;
 }
 
 #container {
-    margin: auto;
+    margin:  40px auto;
     height: 320px;
     width: 320px;
-    background-color: lightblue;
-    border: 1px solid pink;
+    background-color: darkgrey;
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 #container div {
-    height: 20px;
-    width: 20px;
-    background-color: white;
+    background-color: grey;
     /* border: 1px solid black; */
 }
 
-/* #container div:hover {
-    background-color: pink;
-} */
+button {
+    width: 100px;
+    height: 24px;
+    border: none;
+    background-color:  #333;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+input {
+    border-radius: 10px;
+    height: 18px;
+    border: 1px solid darkgrey;
+}
