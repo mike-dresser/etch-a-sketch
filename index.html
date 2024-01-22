@@ -10,14 +10,40 @@
 <body>
     <div id="main">
         <div id="outerFrame">
-            <h2>Etch-a-Sketch</h2>
+            <h2>Etch<span>-a-</span>Sketch</h2>
             <div id="container">
             </div>
         </div>
-        <label for="size">Grid Size
-            <input id="size" type="text">
-        </label>
-        <button id="clear">Clear</button>
+        <div id="controls">
+            <div id="leftControls">
+                <label for="size">Grid Size
+                    <input id="size" type="text">
+                </label>
+                <button id="clear">Clear</button>
+            </div>
+            <div id="rightControls">
+                <ul>
+                    <li>
+                        <label for="standard">
+                            Standard
+                            <input type="radio" name="fillStyle" id="standard" value="standard" checked="true">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="rainbow">
+                            Rainbow
+                            <input type="radio" name="fillStyle" id="rainbow" value="rainbow">
+                        </label>
+                    </li>
+                    <li>
+                        <label for="progressive">
+                            Progressive
+                            <input type="radio" name="fillStyle" id="progressive" value="progressive">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -9,10 +9,6 @@ html {
     text-align: center;
 }
 
-#main {
-    
-}
-
 #container {
     margin:  10px auto;
     height: 420px;
@@ -41,11 +37,35 @@ html {
     color: rgb(235, 187, 65);
     text-shadow: -1px -1px rgb(255, 235, 146), 1px 1px rgb(155, 1, 1);
     font-size: 36px;
+}
 
+#outerFrame span {
+    letter-spacing: 4px;
 }
 #container div {
     background-color: rgb(169, 181, 165);
-    /* border: 1px solid black; */
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: auto;
+}
+
+#leftControls {
+    width: 400px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+#rightControls {
+}
+
+#controls li {
+    list-style-type: none;
+    text-align: right;
 }
 
 button {
@@ -58,8 +78,10 @@ button {
     border-radius: 10px;
 }
 
-input {
+input#size {
     border-radius: 10px;
     height: 18px;
     border: 1px solid darkgrey;
 }
+
+
