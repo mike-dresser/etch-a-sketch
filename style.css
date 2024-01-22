@@ -22,6 +22,7 @@ html {
     flex-wrap: wrap;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(255, 207, 207, 0.836);
 }
 #outerFrame {
     padding: 20px 50px 50px;
@@ -30,13 +31,15 @@ html {
     height: 520px;
     border-radius: 20px;
     background-color: rgb(244, 0, 0);
+    box-shadow: 10px 10px 10px rgb(162, 162, 162);
 
 }
 
 #outerFrame h2 {
     font-family: 'Sofia', serif;
     margin: 0;
-    color: rgb(236, 179, 36);
+    color: rgb(235, 187, 65);
+    text-shadow: -1px -1px rgb(255, 235, 146), 1px 1px rgb(155, 1, 1);
     font-size: 36px;
 
 }

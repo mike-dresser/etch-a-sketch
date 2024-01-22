@@ -1,7 +1,7 @@
 const container = document.querySelector('#container');
 const sizeInput = document.querySelector('#size');
 const clear = document.querySelector('#clear');
-const DEFAULT_GRID_SIZE = 16;
+const DEFAULT_GRID_SIZE = 64;
 sizeInput.value = DEFAULT_GRID_SIZE;
 
 function createGrid(squareValue) {
