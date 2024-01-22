@@ -5,7 +5,7 @@ const DEFAULT_GRID_SIZE = 16;
 sizeInput.value = DEFAULT_GRID_SIZE;
 
 function createGrid(squareValue) {
-    const pixelSize = (320 / squareValue);
+    const pixelSize = (420 / squareValue);
     for (let i = 0; i < (squareValue * squareValue); i++) {
         const pixel = document.createElement('div');
         pixel.style.height = `${pixelSize}px`;
@@ -26,7 +26,7 @@ container.addEventListener('mouseover', eventTarget => {
     eventTarget.target.style.backgroundColor = 'black';
 })
 container.addEventListener('mouseleave', eventTarget => {
-    eventTarget.target.style.backgroundColor = 'hotpink';
+    eventTarget.target.style.backgroundColor = 'rgb(33,33,33)';
 }, true)
 clear.addEventListener('click', () => {
     clearGrid();
