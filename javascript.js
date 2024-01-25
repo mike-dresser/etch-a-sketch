@@ -21,6 +21,7 @@ function clearGrid() {
     const pixels = container.querySelectorAll('div');
     for (const div of pixels) {
         div.style.opacity = '1';
+        div.style.backgroundColor = 'rgb(169, 181, 165)';
     }
     createGrid(sizeInput.value);
 }
@@ -66,9 +67,8 @@ sizeInput.addEventListener('focus', () => clear.textContent = 'Change');
 
 rightControls.addEventListener('click', eventTarget => {
     fillStyle = eventTarget.target.id;
+    if (fillStyle = 'rainbow') createRainbow();
 })
 
 
-
 createGrid(DEFAULT_GRID_WIDTH);
-createRainbow();

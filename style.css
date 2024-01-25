@@ -51,7 +51,7 @@ html {
 }
 #container div {
     background-color: rgb(169, 181, 165);
-    transition: opacity 200ms;
+    transition: opacity 200ms, background-color 200ms;
 }
 
 #controls {
