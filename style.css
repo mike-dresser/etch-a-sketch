@@ -20,7 +20,7 @@ html {
     margin:  10px auto;
     height: 420px;
     width: 560px;
-    background-color: rgb(145, 179, 134);
+    background-color: #000;
     display: flex;
     flex-wrap: wrap;
     border-radius: 20px;
@@ -51,7 +51,7 @@ html {
 }
 #container div {
     background-color: rgb(169, 181, 165);
-    transition: background-color 200ms;
+    transition: opacity 200ms;
 }
 
 #controls {

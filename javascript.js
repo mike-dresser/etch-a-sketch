@@ -12,6 +12,7 @@ function createGrid(gridWidth) {
         const pixel = document.createElement('div');
         pixel.style.height = `${pixelSize}px`;
         pixel.style.width = `${pixelSize}px`;
+        pixel.style.opacity = '1';
         container.appendChild(pixel);
     }
 }
@@ -19,7 +20,7 @@ function createGrid(gridWidth) {
 function clearGrid() {
     const pixels = container.querySelectorAll('div');
     for (const div of pixels) {
-        container.removeChild(div);
+        div.style.opacity = '1';
     }
     createGrid(sizeInput.value);
 }
@@ -37,20 +38,16 @@ function createRainbow() {
 
 container.addEventListener('mouseover', eventTarget => {
     if (fillStyle === 'standard') {
-        eventTarget.target.style.backgroundColor = 'black';
+        eventTarget.target.style.opacity = '0';
     }
     if (fillStyle === 'rainbow'){
         eventTarget.target.style.backgroundColor = `#${rainbowFill[rainbowCounter]}`;
         rainbowCounter >= 63 ? rainbowCounter = 0 : rainbowCounter++;
     }   
     if (fillStyle === 'progressive'){
-        let x = 0;
-        if (eventTarget.target.hasAttribute('opacity')) {
-            x = eventTarget.target.getAttribute('opacity');
-        }
-        if (x < 1) eventTarget.target.setAttribute('opacity', Number(x) + 0.1);
-        eventTarget.target.style.backgroundColor
-             = `rgba(0, 0, 0, ${eventTarget.target.getAttribute('opacity')})`;
+        let x = Number(eventTarget.target.style.opacity)
+        
+        if (x > 0) eventTarget.target.style.opacity = String(x - 0.1);
         }
     
 } 
