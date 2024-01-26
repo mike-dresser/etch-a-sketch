@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 
 html {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -35,27 +34,62 @@ html {
     border-radius: 40px;
     background-color: rgb(244, 0, 0);
     box-shadow: 10px 10px 10px rgb(162, 162, 162);
-
 }
 
 #outerFrame h2 {
-    font-family: 'Sofia', serif;
+    font-family: 'Sofia', cursive;
     margin: 0;
     color: rgb(235, 187, 65);
     text-shadow: -1px -1px rgb(255, 235, 146), 1px 1px rgb(155, 1, 1);
     font-size: 36px;
 }
 
+/* Tweak the -a- in Etch-a-Sketch */
 #outerFrame span {
     letter-spacing: 4px;
 }
+
+/* These are the pixels */
 #container div {
     background-color: rgb(169, 181, 165);
     opacity: 1;
     transition: opacity 200ms, background-color 500ms;
 }
 
+/* Color change in standard mode */
 #container div.active {
+    opacity: 0;
+}
+
+/* Color change in progressive mode */
+#container div[data-pass-count='1'] {
+    opacity: 0.9;
+}
+#container div[data-pass-count='2'] {
+    opacity: 0.8;
+}
+#container div[data-pass-count='3'] {
+    opacity: 0.7;
+}
+#container div[data-pass-count='4'] {
+    opacity: 0.6;
+}
+#container div[data-pass-count='5'] {
+    opacity: 0.5;
+}
+#container div[data-pass-count='6'] {
+    opacity: 0.4;
+}
+#container div[data-pass-count='7'] {
+    opacity: 0.3;
+}
+#container div[data-pass-count='8'] {
+    opacity: 0.2;
+}
+#container div[data-pass-count='9'] {
+    opacity: 0.1;
+}
+#container div[data-pass-count='10'] {
     opacity: 0;
 }
 
