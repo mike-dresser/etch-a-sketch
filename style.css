@@ -51,11 +51,12 @@ html {
 }
 #container div {
     background-color: rgb(169, 181, 165);
+    opacity: 1;
+    transition: opacity 200ms, background-color 500ms;
 }
 
 #container div.active {
-    /* transition: opacity 200ms; */
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 #controls {

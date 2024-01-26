@@ -12,7 +12,6 @@ function createGrid(gridWidth) {
         const pixel = document.createElement('div');
         pixel.style.height = `${pixelSize}px`;
         pixel.style.width = `${pixelSize}px`;
-        pixel.style.opacity = '1';
         container.appendChild(pixel);
     }
 }
@@ -21,6 +20,7 @@ function clearGrid() {
     const pixels = container.querySelectorAll('div');
     for (const div of pixels) {
         div.classList.remove('active');
+        container.removeChild(div);
     }
 }
 
@@ -46,6 +46,7 @@ container.addEventListener('mouseover', eventTarget => {
         rainbowCounter >= 63 ? rainbowCounter = 0 : rainbowCounter++;
     }   
     if (fillStyle === 'progressive'){
+        console.log(`foo: ${eventTarget.target.style.width}`);
         let x = Number(eventTarget.target.style.opacity)
         
         if (x > 0) eventTarget.target.style.opacity = String(x - 0.1);
@@ -60,6 +61,7 @@ container.addEventListener('mouseleave', eventTarget => {
 clear.addEventListener('click', () => {
     clearGrid();
     clear.textContent = 'Clear'
+    createGrid(sizeInput.value);
 })
 sizeInput.addEventListener('focus', () => clear.textContent = 'Change');
 
