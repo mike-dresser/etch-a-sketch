@@ -20,9 +20,8 @@ function createGrid(gridWidth) {
 function clearGrid() {
     const pixels = container.querySelectorAll('div');
     for (const div of pixels) {
-        div.style.opacity = '1';
+        div.classList.remove('active');
     }
-    createGrid(sizeInput.value);
 }
 
 let fillStyle = 'standard';
@@ -38,7 +37,9 @@ function createRainbow() {
 
 container.addEventListener('mouseover', eventTarget => {
     if (fillStyle === 'standard') {
-        eventTarget.target.style.opacity = '0';
+        // eventTarget.target.style.opacity = '0';
+        let classes = eventTarget.target.classList
+        classes.add('active');
     }
     if (fillStyle === 'rainbow'){
         eventTarget.target.style.backgroundColor = `#${rainbowFill[rainbowCounter]}`;
